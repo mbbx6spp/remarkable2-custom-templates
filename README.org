@@ -21,9 +21,9 @@ And an editor/IDE to create your own SVG files.
    - This ensures you have consistency between the PNG or SVG exports of your files.
 3. Backup existing templates and =templates.json= configuration from device:
    - Run =./bin/backup-templates=.
-3. Update =templates.json= to add new entries:
-   - Use your favorite JSON editor to add or amend entries. Soon I will be splicing my own JSON with the existing =templates.json= directly from the device to avoid losing entries from device software updates over time.
-3. Copy new template files (SVGs and PNGs) with =templates.json= to reMarkable2 paper tablet:
+4. Update =custom.json= to add new entries:
+   - Use your favorite JSON editor to add or amend custom entries.
+5. Copy new template files (SVGs and PNGs) with =templates.json= (updated with =custom.json= entries) to reMarkable2 paper tablet:
    - Run =./bin/sync-templates= which assumes you have setup SSH to your reMarkable2 device already (see SSH config section below).
 
 ** SSH config and sticky device IP on home network
