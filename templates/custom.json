@@ -1,0 +1,21 @@
+{
+  "templates": [
+    {
+      "name": "Custom Grid",
+      "filename": "custom-grid",
+      "iconCode": "\ue980",
+      "categories": [
+        "Custom"
+      ]
+    },
+    {
+      "name": "Custom Grid (landscape)",
+      "filename": "custom-grid-landscape",
+      "landscape": "true",
+      "iconCode": "\ue980",
+      "categories": [
+        "Custom"
+      ]
+    }
+  ]
+}

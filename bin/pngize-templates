@@ -1,0 +1,17 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -p inkscape -i bash
+
+main() {
+  local -ra svgfiles="$(ls templates/*.svg)"
+  for svgfile in ${svgfiles[@]}; do
+    echo "Convert SVG ${svgfile} to PNG ${svgfile/.svg/.png}..."
+    inkscape ${svgfile} \
+             --export-type=png \
+             --export-filename=${svgfile/.svg/.png} \
+             --export-background-opacity=255
+    echo "Done"
+  done
+}
+
+set -euo pipefail
+main

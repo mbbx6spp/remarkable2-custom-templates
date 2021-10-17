@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+main() {
+  local -r rev="$(date +%s)"
+
+  mkdir -p "backup/${rev}"
+  scp remarkable2:/usr/share/remarkable/templates/* "backup/${rev}/"
+
+  echo "Backup saved in $PWD/backup/${rev}"
+}
+
+set -euo pipefail
+main

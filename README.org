@@ -1,0 +1,54 @@
+#+TITLE: reMarkable2 tablet customizations and utilities
+
+Repository showing how to build and deploy custom PNG templates for your reMarkable2 tablet.
+
+** Prerequisites
+
+I use Nix, if you don't use that then you will need to install the following on your own based on your own package management religion:
+
+- inkscape
+- bash
+- scp/ssh
+
+And an editor/IDE to create your own SVG files.
+
+** Process
+
+1. Create SVG template using appropriate dimensions for portrait and landscape:
+   - Use your favorite editor or SVG creator for this step.
+2. Convert SVG tempalte to PNG:
+   - Run =./bin/pngize-templates= making sure to edit the template file list.
+   - This ensures you have consistency between the PNG or SVG exports of your files.
+3. Backup existing templates and =templates.json= configuration from device:
+   - Run =./bin/backup-templates=.
+3. Update =templates.json= to add new entries:
+   - Use your favorite JSON editor to add or amend entries. Soon I will be splicing my own JSON with the existing =templates.json= directly from the device to avoid losing entries from device software updates over time.
+3. Copy new template files (SVGs and PNGs) with =templates.json= to reMarkable2 paper tablet:
+   - Run =./bin/sync-templates= which assumes you have setup SSH to your reMarkable2 device already (see SSH config section below).
+
+** SSH config and sticky device IP on home network
+
+I use my =reMarkable2= primarily on my home network, which I configured to issue my reMarkable2's MAC address the same persistent private IP address each time it connects. This allows me to fix the IP address for my reMarkable2 in my =~/.ssh/config= file for simpler
+scripting.
+
+This is an example of a remarkable2 entry:
+#+begin_src ssh_config
+Host remarkable2
+  ForwardAgent no
+  PasswordAuthentication yes
+  Hostname 192.168.10.99
+  User root
+  Port 22
+  IdentityFile ~/.ssh/id_ecdsa
+#+end_src
+
+Then in my scripts above, I leverage the =remarkable2= alias for automation purposes.
+
+The configuration necessary for your home network to issue the same fixed private IP to your device will be specific to your home
+networing gear and as such I will not provide that information here.
+
+** Templates
+
+Some notes about the templates:
+- portrait  ::  1404×1872 pixels
+- landscape :: 1872x1404 pixels

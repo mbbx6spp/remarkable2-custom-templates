@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+main() {
+  local -r rev="$(date +%s)"
+  local -ra syncfiles=($(find templates -name "*.png"))
+
+  scp remarkable2:/usr/share/remarkable/templates/templates.json templates/templates.orig.json
+
+  for svg in "${syncfiles[@]}"; do
+    echo -n "Copying over ${svg}..."
+    scp "${svg}" remarkable2:/usr/share/remarkable/templates/ || echo "FAILED"
+    echo "OK"
+  done
+  jq -n '{ templates: [ inputs.templates ] | add }' templates/templates.orig.json templates/custom.json > templates/templates.json
+  scp templates/templates.json remarkable2:/usr/share/remarkable/templates/templates.json
+
+  env GIT_PAGER=cat git diff -- templates/templates.json
+
+  echo "Do you want to restart xochitl? (y/N)"
+  read -r restart
+
+  case "${restart}" in
+    y|y*|Y|Y*)
+      ssh remarkable2 -- systemctl restart xochitl
+      ;;
+    *)
+      >&2 echo "Warning: service xochitl was not restarted, your custom templates will not be available yet."
+  esac
+}
+
+set -euo pipefail
+main
