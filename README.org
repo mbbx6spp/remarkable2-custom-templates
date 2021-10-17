@@ -1,6 +1,8 @@
 #+TITLE: reMarkable2 tablet customizations and utilities
 
-Repository showing how to build and deploy custom PNG templates for your reMarkable2 tablet.
+Repository showing how to build and deploy custom PNG templates for your [[https://remarkable.com/referral/N8CA-DAPR][reMarkable2 paper tablet.]]
+
+I am in the process of writing a review [[https://www.susanpotter.net/reviews/remarkable2-eink-tablet/][on my personal site]].
 
 ** Prerequisites
 
@@ -24,11 +26,11 @@ And an editor/IDE to create your own SVG files.
 4. Update =custom.json= to add new entries:
    - Use your favorite JSON editor to add or amend custom entries.
 5. Copy new template files (SVGs and PNGs) with =templates.json= (updated with =custom.json= entries) to reMarkable2 paper tablet:
-   - Run =./bin/sync-templates= which assumes you have setup SSH to your reMarkable2 device already (see SSH config section below).
+   - Run =./bin/sync-templates= which assumes you have setup SSH to your [[https://remarkable.com/referral/N8CA-DAPR][reMarkable2 device]] already (see SSH config section below).
 
 ** SSH config and sticky device IP on home network
 
-I use my =reMarkable2= primarily on my home network, which I configured to issue my reMarkable2's MAC address the same persistent private IP address each time it connects. This allows me to fix the IP address for my reMarkable2 in my =~/.ssh/config= file for simpler
+I use my [[https://remarkable.com/referral/N8CA-DAPR][reMarkable2]] primarily on my home network, which I configured to issue my reMarkable2's MAC address the same persistent private IP address each time it connects. This allows me to fix the IP address for my reMarkable2 in my =~/.ssh/config= file for simpler
 scripting.
 
 This is an example of a remarkable2 entry:
@@ -52,3 +54,4 @@ networing gear and as such I will not provide that information here.
 Some notes about the templates:
 - portrait  ::  1404×1872 pixels
 - landscape :: 1872x1404 pixels
+- no transparency
