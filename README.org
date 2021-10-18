@@ -1,5 +1,8 @@
 #+TITLE: reMarkable2 tablet customizations and utilities
 
+#+CAPTION: Support the work I share for free
+[[https://ko-fi.com/Q5Q24PSU2][[[https://ko-fi.com/img/githubbutton_sm.svg]​]​]]
+
 Repository showing how to build and deploy custom PNG templates for your [[https://remarkable.com/referral/N8CA-DAPR][reMarkable2 paper tablet.]]
 
 I am in the process of writing a review [[https://www.susanpotter.net/reviews/remarkable2-eink-tablet/][on my personal site]].
