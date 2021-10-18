@@ -1,6 +1,5 @@
 #+TITLE: reMarkable2 tablet customizations and utilities
 
-[[https://ko-fi.com/Q5Q24PSU2][Support my free work on ko-fi]].
 
 This repository shows how to build and deploy custom PNG templates for your [[https://remarkable.com/referral/N8CA-DAPR][reMarkable2 paper tablet notebooks.]]
 
@@ -64,3 +63,7 @@ Some notes about the templates:
 Licensed under BSD 3-clause (revised): https://tldrlegal.com/license/bsd-3-clause-license-(revised)
 
 Copyright (c) 2021 Susan Potter. All rights reserved.
+
+** Support Author
+
+[[https://ko-fi.com/Q5Q24PSU2][Support my free work and buy me a coffee via ko-fi!]].
