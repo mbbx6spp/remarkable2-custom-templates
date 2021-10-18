@@ -1,11 +1,10 @@
 #+TITLE: reMarkable2 tablet customizations and utilities
 
-#+CAPTION: Support the work I share for free
-[[https://ko-fi.com/Q5Q24PSU2][[[https://ko-fi.com/img/githubbutton_sm.svg]​]​]]
+[[https://ko-fi.com/Q5Q24PSU2][Support my free work on ko-fi]].
 
-Repository showing how to build and deploy custom PNG templates for your [[https://remarkable.com/referral/N8CA-DAPR][reMarkable2 paper tablet.]]
+This repository shows how to build and deploy custom PNG templates for your [[https://remarkable.com/referral/N8CA-DAPR][reMarkable2 paper tablet notebooks.]]
 
-I am in the process of writing a review [[https://www.susanpotter.net/reviews/remarkable2-eink-tablet/][on my personal site]].
+For the curious, I'm in the process of writing a review [[https://www.susanpotter.net/reviews/remarkable2-eink-tablet/][on my personal site]].
 
 ** Prerequisites
 
@@ -14,6 +13,7 @@ I use Nix, if you don't use that then you will need to install the following on 
 - inkscape
 - bash
 - scp/ssh
+- jq
 
 And an editor/IDE to create your own SVG files.
 
