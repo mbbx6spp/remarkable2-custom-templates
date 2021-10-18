@@ -58,3 +58,9 @@ Some notes about the templates:
 - portrait  ::  1404×1872 pixels
 - landscape :: 1872x1404 pixels
 - no transparency
+
+** License
+
+Licensed under BSD 3-clause (revised): https://tldrlegal.com/license/bsd-3-clause-license-(revised)
+
+Copyright (c) 2021 Susan Potter. All rights reserved.
